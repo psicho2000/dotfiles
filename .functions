@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# list all functions using 'declare -f'
+# list all function names using 'declare -F'
+
 # create a directory recursively an cd to it
 function md() {
 	mkdir -p "$@" && cd "$_";
