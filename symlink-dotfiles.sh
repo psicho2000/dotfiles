@@ -18,8 +18,12 @@ link() {
   ln -s "$from" "$to"
 }
 
-for location in $(find $dotfiles -name '.*'); do
-  file="${location##*/}"
-  file="${file%.sh}"
-  link "$location" "$HOME/$file"
+cd $dotfiles
+
+for location in $(find . -type f -name '.*'); do
+  if [[ $location != "./.git" ]] && [[ $location != "./.gitignore" ]]; then
+    file="${location##*/}"
+    file="${file%.sh}"
+    link "$dotfiles/$location" "$HOME/$file"
+  fi
 done
