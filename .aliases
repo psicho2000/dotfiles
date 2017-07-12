@@ -16,7 +16,7 @@ export LS_COLORS='no=00:fi=00:di=01;31:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 alias ll="ls -lA --color"
 
 # Always use color output for `ls`
-#alias ls="command ls --color" # not working properly
+alias ls="ls --color"
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
@@ -25,7 +25,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # Enable aliases to be sudo`ed
-#alias sudo='sudo ' # not working properly
+alias sudo='sudo '
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
