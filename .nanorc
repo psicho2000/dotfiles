@@ -79,7 +79,7 @@ bind ^R replace main
 bind ^Z undo main
 bind ^Y redo main
 ## Toggle display
-bind F5 refresh main
+bind F5 refresh all
 bind F9 nohelp main
 bind F10 constupdate main
 bind ^P whitespacedisplay main
