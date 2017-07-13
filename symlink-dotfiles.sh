@@ -1,14 +1,6 @@
 #!/bin/bash
 
-dev="$HOME"
-dotfiles="$dev/dotfiles"
-
-if [[ -d "$dotfiles" ]]; then
-  echo "Symlinking dotfiles from $dotfiles"
-else
-  echo "$dotfiles does not exist"
-  exit 1
-fi
+dotfiles="$HOME/dotfiles"
 
 link() {
   from="$1"
@@ -18,10 +10,17 @@ link() {
   ln -s "$from" "$to"
 }
 
+if [[ -d "$dotfiles" ]]; then
+  echo "Symlinking dotfiles from $dotfiles"
+else
+  echo "$dotfiles does not exist"
+  exit 1
+fi
+
 cd $dotfiles
 
-for location in $(find . -type f -name '.*'); do
-  if [[ $location != "./.git" ]] && [[ $location != "./.gitignore" ]]; then
+for location in $(find . -maxdepth 1 -type f -name '.*'); do
+  if [[ $location != "./.gitignore" ]]; then
     file="${location##*/}"
     file="${file%.sh}"
     link "$dotfiles/$location" "$HOME/$file"
