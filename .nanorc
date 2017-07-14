@@ -132,7 +132,6 @@ unbind M-= main
 unbind M-< main
 unbind M-> main
 unbind ^I main
-unbind ^M main
 unbind ^D main
 unbind ^H main
 unbind ^L main
