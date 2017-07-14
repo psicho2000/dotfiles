@@ -3,9 +3,12 @@
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
 
-# Don’t clear the screen after quitting a manual page.
+# Do not clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
 # for colored less - install python-pygments and .lessfilter to use it
 export LESS='-R'
 export LESSOPEN='|~/.lessfilter %s'
+
+# define nano as default editor
+export EDITOR='nano'
