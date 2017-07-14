@@ -136,3 +136,23 @@ unbind ^M main
 unbind ^D main
 unbind ^H main
 unbind ^L main
+
+#################################
+## Syntax Highlighting ##########
+#################################
+
+## YAML Syntax
+syntax "YAML" "\.ya?ml$"
+header "^---" "%YAML"
+
+color green     "(^| )!!(binary|bool|float|int|map|null|omap|seq|set|str) "
+color brightcyan  "\<(YES|yes|Y|y|ON|on|NO|no|N|n|OFF|off)\>"
+color brightcyan "\<(true|false)\>"
+color red ":[[:space:]]" "\[" "\]" ":[[:space:]]+[|>]" "^[[:space:]]*- "
+color brightyellow "[[:space:]][\*&][A-Za-z0-9]+"
+color yellow ""(\\.|[^"])*"|'(\\.|[^'])*'"
+color brightblack "(^|[[:space:]])#([^{].*)?$"
+color brightmagenta  "^---" "^\.\.\." "^%YAML" "^%TAG"
+color cyan "\$[A-Za-z_\.]+"
+color ,green "[[:space:]]+$"
+color ,red "    + +| +  +"
