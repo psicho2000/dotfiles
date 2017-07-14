@@ -1,5 +1,8 @@
 #!/bin/sh
-# .lessfilter to use pygmentize
+# .lessfilter to use pygmentize - colorize outputs for less
+# apt-get install python-pygments
+# export LESS='-R'
+# export LESSOPEN='|~/.lessfilter %s'
 
 case "$1" in
 # add all extensions you want to handle here
