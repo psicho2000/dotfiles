@@ -1,5 +1,8 @@
 ## Introduction
-Dotfile collection for combined bash/zsh usage. Includes docker aliases.
+Dotfile collection for combined bash/zsh usage. Includes:
+* Solarized theme for bash shell
+* Script for symlinking dotfiles into home dir
+* Docker aliases
 
 ## References
  * https://dotfiles.github.io/
