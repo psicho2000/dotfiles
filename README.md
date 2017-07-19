@@ -14,7 +14,6 @@ Dotfile collection for combined bash/zsh usage. Includes:
   * ys Theme
   * Nano as default Editor
   * Plugins
-    * history (history aliases)
     * colorize (adds alias colorize <filename>)
     * colored-man-pages (man pages are colored by default)
     * common-aliases

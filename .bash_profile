@@ -1,5 +1,5 @@
 # Load the shell dotfiles
-for file in ~/.{bash_prompt,exports,aliases,functions,docker}; do
+for file in ~/.{bash_prompt,exports,functions,aliases,docker}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
