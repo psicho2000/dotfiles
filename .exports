@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Define editors
 export EDITOR='nano'
 export VISUAL='nano'
