@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Define nano as default editor
-export EDITOR='nano'
-
 # Load common dotfiles
 for file in ~/.{functions,aliases,docker}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
@@ -18,3 +15,8 @@ fi
 function lessc() {
     colorize $1|less
 }
+
+# Define editors
+export EDITOR='nano'
+export VISUAL='nano'
+export PAGER='less'
