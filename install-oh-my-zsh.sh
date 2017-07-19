@@ -14,6 +14,5 @@ sed -i -E 's/ZSH_THEME=.*/ZSH_THEME="ys"/g' ~/.zshrc
 echo "Adding plugins: history colorize colored-man-pages common-aliases dircycle sudo"
 sed -i -E 's/plugins=.*/plugins=\(git history colorize colored-man-pages common-aliases dircycle sudo\)/g' ~/.zshrc
 
-# define nano as default editor
-echo "Define nano as default editor"
-echo "export EDITOR='nano'" >> ~/.zshrc
+# Add custom configuration
+echo "source .zsh_custom" >> ~/.zshrc
