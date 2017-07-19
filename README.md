@@ -3,10 +3,8 @@ Dotfile collection for combined bash/zsh usage. Includes:
 * Solarized theme
   * Remember to additionally set a Solarized Theme in your favorite Terminal Emulator, e.g.
     * MobaXterm > Settings > Configuration > Terminal > Colors: Solarized Dark 
-* Script for symlinking dotfiles into home dir
 * Docker aliases
-* Nano as default Editor
-* Biased Nano settings, e.g.
+* Nano as default Editor with biased settings, e.g.
   * Show line numbers
   * Tabs to Spaces with width 4
   * Coloring for Title, Status, Line Numbers and Quick help
