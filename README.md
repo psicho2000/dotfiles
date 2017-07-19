@@ -32,7 +32,21 @@ Dotfile collection for combined bash/zsh usage. Includes:
  1. `dotfiles/unlink-dotfiles.sh`
 
 ## Layout
-
+ .bashrc            .zshrc        .nanorc     .inputrc
+     |                 |
+     v                 v
+.bash_profile      .zsh_custom --> .oh-my-zsh/
+    |  |               |
+    |  |               v
+    |  L------->.load_common_files
+    v              |  |  |  |   |
+.bash_prompt       |  |  |  |   |
+                   v  |  |  |   v
+           .functions |  |  |  .dircolors
+                      v  |  v
+                .aliases |  .docker
+                         v
+                     .exports
 
 ## References
  * https://dotfiles.github.io/
