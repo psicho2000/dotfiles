@@ -13,3 +13,8 @@ unset file;
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
+
+# Define alias for colorized less
+function lessc() {
+    colorize $1|less
+}
