@@ -19,7 +19,7 @@ alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r 
 
 # ls aliases
 alias ll="ls -lA --color"
-## Always use color output for `ls`
+## Always use colored output for `ls`
 alias ls="ls --color"
 
 # Always enable colored `grep` output
