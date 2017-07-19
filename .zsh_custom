@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Define nano as default editor"
+# Define nano as default editor
 export EDITOR='nano'
 
 # Load common dotfiles
