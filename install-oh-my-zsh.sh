@@ -2,9 +2,8 @@
 
 # see https://github.com/robbyrussell/oh-my-zsh
 
-cd ~
-
 # install oh-my-zsh
+export TERM='xterm'
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # set theme to ys
