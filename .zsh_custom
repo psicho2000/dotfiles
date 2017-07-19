@@ -1,15 +1,4 @@
-#!/bin/bash
-
-# Load common dotfiles
-for file in ~/.{functions,aliases,docker,exports}; do
-    [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
-
-# Set dircolors
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-fi
+source .load_common_files
 
 # Define alias for colorized less
 function lessc() {
