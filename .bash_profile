@@ -4,6 +4,7 @@ for file in ~/.{bash_prompt,exports,aliases,functions,docker}; do
 done;
 unset file;
 
+# Set dircolors
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
