@@ -1,6 +1,4 @@
-#!/bin/bash
-
-# Define editors
+# Define editors (Ctrl+X, Ctrl+E opens default editor)
 export EDITOR='nano'
 export VISUAL='nano'
 export PAGER='less'

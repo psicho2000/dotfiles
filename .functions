@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # list all functions using 'declare -f'
 # list all function names using 'declare -F'
 
