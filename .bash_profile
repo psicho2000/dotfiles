@@ -1,6 +1,6 @@
 source ~/.load_common_files
 
-if [ -f .bash_prompt ]; then
+if [ -f ~/.bash_prompt ]; then
     source ~/.bash_prompt
 fi
 
