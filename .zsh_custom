@@ -1,4 +1,4 @@
-source .load_common_files
+source ~/.load_common_files
 
 # Define alias for colorized less
 function lessc() {
