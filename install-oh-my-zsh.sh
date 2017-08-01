@@ -15,4 +15,4 @@ echo "Adding plugins: colorize colored-man-pages common-aliases dircycle sudo"
 sed -i -E 's/plugins=.*/plugins=\(git history colorize colored-man-pages common-aliases dircycle sudo\)/g' ~/.zshrc
 
 # Add custom configuration
-echo "source .zsh_custom" >> ~/.zshrc
+echo "source ~/.zsh_custom" >> ~/.zshrc
