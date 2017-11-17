@@ -38,10 +38,10 @@ Dotfile collection for combined bash/zsh usage. Includes:
     |  |               |
     |  |               v
     |  L------->.load_common_files
-    v              |  |  |  |   |
-.bash_prompt       |  |  |  |   |
-                   v  |  |  |   v
-           .functions |  |  |  .dircolors
+    v              |  |  |  |  |  |
+.bash_prompt       |  |  |  |  |  L->.custom
+                   v  |  |  |  v
+           .functions |  |  | .dircolors
                       v  |  v
                 .aliases |  .docker
                          v
