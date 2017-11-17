@@ -28,6 +28,7 @@ for location in $(find . -maxdepth 1 -type f -name '.*'); do
 done
 
 if [ ! -f ~/.custom ]; then
+    echo "Creating .custom"
     echo "# Put custom commands specific to environment / server here" > ~/.custom
 else
     echo ".custom already exists in home directory"
