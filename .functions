@@ -2,12 +2,13 @@
 # list all function names using 'declare -F'
 
 # create a directory recursively an cd to it
-function md() {
+function make-dir() {
 	mkdir -p "$@" && cd "$_";
 }
+alias md='make-dir'
 
 # Determine size of a file or total size of a directory
-function fs() {
+function file-size() {
 	if du -b /dev/null > /dev/null 2>&1; then
 		local arg=-sbh;
 	else
@@ -19,6 +20,7 @@ function fs() {
 		du $arg .[^.]* ./*;
 	fi;
 }
+alias fs='file-size'
 
 # Use Git’s colored diff when available
 hash git &>/dev/null;
@@ -32,12 +34,7 @@ fi;
 # the `.git` directory, listing directories first. The output gets piped into
 # `less` with options to preserve color and line numbers, unless the output is
 # small enough for one screen.
-function tre() {
+function tree-improved() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
-
-# search in history
-function hs
-{
-    history | grep $*
-}
+alias tre='tree-improved'

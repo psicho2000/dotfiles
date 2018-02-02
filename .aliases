@@ -10,8 +10,13 @@ alias -- -="cd -"
 alias fuck='sudo $(history -p !!)'
 
 # History stuff
+# search in history
+function history-search() {
+    history | grep $*
+}
+alias hs='history-search'
 alias h='history'
-alias hsi='hs -i'
+alias hsi='history-search -i'
 ## Lists the ten most used commands
 alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r | head"
 
