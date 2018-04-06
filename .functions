@@ -38,3 +38,15 @@ function tree-improved() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
 alias tre='tree-improved'
+
+# Show what an alias or function does
+function explain() {
+    alias_result=$(alias $1 2>&1)
+    if [[ ! $alias_result =~ "not found" ]]; then
+        echo $alias_result
+        alias_part=${alias_result#*\'}
+        alias_part=${alias_part:0:${#alias_part}-1}
+        declare -f $alias_part
+    fi
+    declare -f $1
+}

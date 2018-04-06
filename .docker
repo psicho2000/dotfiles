@@ -1,11 +1,32 @@
 alias d='docker'
+alias de='docker-exec'
 alias dc='docker-compose'
-alias log="docker-compose logs -f"
+alias dce='docker-compose-exec'
+alias dcu='docker-compose-update'
+alias dcl='docker-compose logs -f'
+alias dps='docker-ps-format'
+alias dpsn='docker-ps-format-sort-by-name'
+alias log='docker-compose logs -f'
 
 function inspect() {
   docker ps|grep $1|awk -F'[[:space:]]+' '{print $1}'|xargs docker inspect|less
 }
 
-function de() {
+function docker-compose-exec ()
+{
+    docker-compose exec "$1" bash
+}
+function docker-compose-update() {
+    docker-compose stop $*
+    docker-compose pull $*
+    docker-compose up -d $*
+}
+function docker-exec() {
     docker exec -it "$1" bash
+}
+function docker-ps-format() {
+    docker ps $* --format 'table {{.ID}}\t{{.Image}}\t{{.RunningFor}}\t{{.Status}}\t{{.Ports}}'
+}
+function docker-ps-format-sort-by-name() {
+    docker-ps-format $*|awk 'NR<2{print $0;next}{print $0| "sort -k2"}'
 }
