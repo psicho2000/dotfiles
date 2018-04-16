@@ -34,18 +34,16 @@ Dotfile collection for combined bash/zsh usage. Includes:
  .bashrc            .zshrc        .nanorc     .inputrc
      |                 |
      v                 v
-.bash_profile      .zsh_custom --> .oh-my-zsh/
+.bash_profile      .zsh_custom --> .oh-my-zsh
     |  |               |
     |  |               v
     |  L------->.load_common_files
-    v              |  |  |  |  |  |
-.bash_prompt       |  |  |  |  |  L->.custom
-                   v  |  |  |  v
-           .functions |  |  | .dircolors
-                      v  |  v
-                .aliases |  .docker
-                         v
-                     .exports
+    v              |  |     |  |  |
+.bash_prompt       |  |     |  |  L->.custom
+                   v  |     |  v
+             .aliases |     | .dircolors
+                      v     v
+                .exports    .docker --> .docker-compose-completion.sh
 ```
 
 ## References
