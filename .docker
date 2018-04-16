@@ -1,4 +1,4 @@
-. ~./.docker-compose-completion.sh
+. ~/.docker-compose-completion.sh
 
 alias d='docker'
 alias dc='docker-compose'
