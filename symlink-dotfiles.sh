@@ -19,11 +19,9 @@ fi
 
 cd $dotfiles
 
-for location in $(find . -maxdepth 1 -type f -name '.*'); do
+for location in $(find . -maxdepth 1 -type f -name '.*' -printf '%f\n'); do
   if [[ $location != "./.gitignore" ]]; then
-    file="${location##*/}"
-    file="${file%.sh}"
-    link "$dotfiles/$location" "$HOME/$file"
+    link "$dotfiles/$location" "$HOME/$location"
   fi
 done
 
