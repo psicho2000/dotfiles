@@ -34,7 +34,7 @@ Dotfile collection for combined bash/zsh usage. Includes:
  .bashrc            .zshrc        .nanorc     .inputrc
      |                 |
      v                 v
-.bash_profile      .zsh_custom --> .oh-my-zsh
+.bash_profile      .zsh_custom --> .oh-my-zsh/
     |  |               |
     |  |               v
     |  L------->.load_common_files
