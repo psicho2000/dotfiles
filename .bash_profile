@@ -1,4 +1,5 @@
 source ~/.load_common_files
+source ~/.docker-compose-completion.sh
 
 if [ -f ~/.bash_prompt ]; then
     source ~/.bash_prompt

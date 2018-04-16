@@ -31,19 +31,21 @@ Dotfile collection for combined bash/zsh usage. Includes:
 
 ## Layout
 ```
- .bashrc            .zshrc        .nanorc     .inputrc
-     |                 |
-     v                 v
-.bash_profile      .zsh_custom --> .oh-my-zsh/
-    |  |               |
-    |  |               v
-    |  L------->.load_common_files
-    v              |  |     |  |  |
-.bash_prompt       |  |     |  |  L->.custom
-                   v  |     |  v
-             .aliases |     | .dircolors
-                      v     v
-                .exports    .docker --> .docker-compose-completion.sh
+       .bashrc            .zshrc     .nanorc     .inputrc
+          |                |   |
+          v                v   L--> .oh-my-zsh/
+    .bash_profile      .zsh_custom
+       |     | |           |
+       |     | |           v
+       |     | L------->.load_common_files
+       v     |            |  |     |  |  |
+.bash_prompt |            |  |     |  |  L--> .custom
+             |            v  |     |  v
+             |      .aliases |     | .dircolors
+             |               v     v
+             |         .exports    .dockercfg
+             v
+.docker-compose-completion.sh
 ```
 
 ## References
