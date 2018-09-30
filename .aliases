@@ -24,7 +24,7 @@ alias hsi='history-search -i'
 alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r | head"
 
 # ls aliases
-alias ll="ls -lAh --color"
+alias ll="ls -lAh --color --group-directories-first"
 ## Always use colored output for `ls`
 alias ls="ls --color"
 
