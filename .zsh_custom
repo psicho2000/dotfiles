@@ -1,6 +1,0 @@
-source ~/.load_common_files
-
-# Define alias for colorized less
-function lessc() {
-    colorize $1|less
-}

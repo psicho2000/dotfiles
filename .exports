@@ -1,7 +1,0 @@
-# Define editors (Ctrl+X, Ctrl+E opens default editor)
-export EDITOR='nano'
-export VISUAL='nano'
-export PAGER='less'
-
-# Do not clear the screen after quitting a manual page.
-export MANPAGER='less -X';
